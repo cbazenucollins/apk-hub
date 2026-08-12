@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>APK Hub - Android Apps & Games</title>
+
+  <meta name="description" content="APK Hub - Discover useful Android apps and games.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      background: #151515;
+      padding: 20px 15px;
+      text-align: center;
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #00ff88;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      color: #bbbbbb;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .search-box button {
+      padding: 14px 18px;
+      border: none;
+      border-radius: 8px;
+      background: #00ff88;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 20px 0 30px;
+    }
+
+    .category {
+      background: #1b1b1b;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .app-card {
+      background: #1b1b1b;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #292929;
+    }
+
+    .app-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 15px;
+      background: #292929;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .app-card h3 {
+      margin: 5px 0;
+    }
+
+    .app-card p {
+      color: #bbbbbb;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .download {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #00ff88;
+      color: #000;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .ad-space {
+      margin: 30px 0;
+      padding: 25px;
+      background: #171717;
+      border: 1px dashed #444;
+      border-radius: 10px;
+      text-align: center;
+      color: #888;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 25px 15px;
+      text-align: center;
+      background: #151515;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @media (max-width: 500px) {
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">📱 APK Hub</div>
+    <div class="tagline">
+      Discover useful Android apps and games
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Search -->
+    <div class="search-box">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search apps or games..."
+      >
+
+      <button onclick="searchApps()">
+        Search
+      </button>
+    </div>
+
+    <!-- Categories -->
+    <h2>📂 Categories</h2>
+
+    <div class="categories">
+      <div class="category">📱 Apps</div>
+      <div class="category">🎮 Games</div>
+      <div class="category">🛠️ Tools</div>
+      <div class="category">🎬 Entertainment</div>
+    </div>
+
+    <!-- Ad Space -->
+    <div class="ad-space">
+      Advertisement
+    </div>
+
+    <!-- Featured -->
+    <h2>⭐ Featured Apps</h2>
+
+    <div class="apps">
+
+      <div class="app-card">
+        <div class="app-icon">📱</div>
+
+        <h3>Featured App</h3>
+
+        <p>
+          Your featured Android application will appear here.
+        </p>
+
+        <a href="#" class="download">
+          View App
+        </a>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon">🎮</div>
+
+        <h3>Featured Game</h3>
+
+        <p>
+          Your featured Android game will appear here.
+        </p>
+
+        <a href="#" class="download">
+          View Game
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Latest -->
+    <h2>🆕 Latest Apps</h2>
+
+    <div class="apps" id="appList">
+
+      <div class="app-card">
+        <div class="app-icon">🧮</div>
+
+        <h3>Percentage Calculator</h3>
+
+        <p>
+          Calculate percentages quickly and easily.
+        </p>
+
+        <a
+          href="https://cbazenucollins.github.io/Monetag-website/"
+          class="download"
+        >
+          Open
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Ad Space -->
+    <div class="ad-space">
+      Advertisement
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 APK Hub. All rights reserved.
+  </footer>
+
+  <script>
+    function searchApps() {
+
+      const search =
+        document.getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+      const cards =
+        document.querySelectorAll(".app-card");
+
+      cards.forEach(function(card) {
+
+        const text =
+          card.innerText.toLowerCase();
+
+        if (search === "" || text.includes(search)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+
+      });
+
+    }
+  </script>
+
+</body>
+</html>
